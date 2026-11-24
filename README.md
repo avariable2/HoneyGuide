@@ -35,7 +35,7 @@ swift test
 bash scripts/build-app.sh
 ```
 
-The following section documents implementation details, constraints and repeatable tests. For a broader developer profile, see the project links in the GitHub account.
+The following section documents implementation details, constraints and repeatable tests. For a broader developer profile, see the [AI engineering portfolio](PORTFOLIO.md).
 
 ---
 
