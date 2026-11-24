@@ -10,8 +10,8 @@ struct LocalMenuApp: App {
         } label: {
             Image(systemName: "circle")
                 .imageScale(.small)
-                .accessibilityLabel("LocalMenu")
-                .help("LocalMenu")
+                .accessibilityLabel("Honeyguide")
+                .help("Honeyguide")
         }
         .menuBarExtraStyle(.window)
     }
