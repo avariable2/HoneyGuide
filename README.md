@@ -1,5 +1,45 @@
-# LocalMenu
+# Honeyguide 🐦
 
+**Privacy-aware AI document assistant for macOS — built with SwiftUI, on-device LLMs and constrained document tools.**
+
+Honeyguide helps people ask questions about their own documents. Users explicitly select a file or folder; the assistant indexes supported content and searches relevant passages rather than giving an AI model unrestricted access to their computer.
+
+### Engineering highlights
+
+- **Local inference:** Ollama + a locally hosted Qwen model by default; models are selected with memory constraints in mind.
+- **Source-grounded answers:** SQLite FTS5/BM25 retrieval, scoped read-only tools, source references and explicit handling when evidence is missing.
+- **Document processing:** PDFKit, Apple Vision OCR, images, text, CSV, DOCX, XLSX and Pages formats.
+- **Safety and privacy:** narrowly scoped source permissions, limits on processing and tool calls, tests for untrusted document instructions, and no execution/shell tools given to the model.
+- **Practical delivery:** native Swift package, automated installation, tests and documentation of resource tradeoffs.
+
+### Privacy boundaries
+
+**Local Ollama mode** keeps inference and document retrieval on-device after installation. **Optional Claude Code mode is cloud-based**: document excerpts, questions and file names can leave the Mac and are processed by Anthropic. Users should keep local mode for sensitive material. This is an engineering project, not a guarantee of perfect model accuracy.
+
+### Try it
+
+Requirements: macOS 14+, Apple Silicon, Swift 6.2+ and sufficient free memory/storage. The installer performs runtime checks before setup.
+
+```sh
+bash scripts/install.sh
+open ~/Applications/LocalMenu.command
+```
+
+The repository directory, executable and launcher still use the former internal identifier **LocalMenu** for compatibility; the app's display name is **Honeyguide**. A GitHub repository rename requires repository administration access and is a separate operation.
+
+### Verification
+
+```sh
+python3 -m unittest discover -s scripts/tests -v
+swift test
+bash scripts/build-app.sh
+```
+
+The following section documents implementation details, constraints and repeatable tests. For a broader developer profile, see the project links in the GitHub account.
+
+---
+
+## Documentation technique (nom interne conservé : LocalMenu)
 Assistant documentaire macOS dans la barre de menus. SwiftUI, moteur local Ollama, aucun framework tiers ajouté au projet. macOS 14 minimum ; Xcode avec Swift 6.2 minimum pour compiler.
 
 ## Installer et lancer
