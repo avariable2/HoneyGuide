@@ -1,6 +1,37 @@
+# Build products and local state
 .build/
 .swiftpm/
 dist/
 .DS_Store
 __pycache__/
 *.pyc
+*.log
+*.xcuserstate
+**/xcuserdata/
+
+# Never commit developer environments or credentials
+.env
+.env.*
+**/.env
+**/.env.*
+*.pem
+*.key
+*.p12
+*.p8
+*.mobileprovision
+*.cer
+id_rsa*
+id_ed25519*
+*credentials*.json
+*secrets*.json
+*.local.json
+*.local.yml
+*.local.yaml
+
+# Personal documents and locally generated indexes
+private/
+local-data/
+.local/
+*.sqlite
+*.sqlite-wal
+*.sqlite-shm
