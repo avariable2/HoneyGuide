@@ -4,12 +4,12 @@ I build native applications and practical AI systems, with an emphasis on privac
 
 ## Featured public projects
 
-### [Honeyguide](https://github.com/avariable2/LocalMenu) — Private-by-default document assistant for macOS
+### [HoneyGuide](https://github.com/avariable2/HoneyGuide) — Private-by-default document assistant for macOS
 SwiftUI • Ollama • locally hosted LLMs • SQLite FTS5/BM25 • Apple Vision • PDFKit
 
 An assistant that answers questions about explicitly selected local documents. It combines constrained read-only tools, source-linked answers, OCR and resource-bounded document indexing. Optional cloud-model mode has clearly documented privacy trade-offs.
 
-**[Explore Honeyguide's technical documentation](HONEYGUIDE.md)** · [Source code](https://github.com/avariable2/LocalMenu/tree/main/Sources)
+**[Explore HoneyGuide's technical documentation](HONEYGUIDE.md)** · [Source code](https://github.com/avariable2/HoneyGuide/tree/main/Sources)
 
 ### [Bordero (iOS)](https://github.com/avariable2/Bordero_Swift) — Business workflow software
 SwiftUI • Core Data • document/PDF workflows
